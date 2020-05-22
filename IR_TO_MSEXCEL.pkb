@@ -152,7 +152,7 @@ as
       FROM apex_appl_page_igs
     WHERE application_id = nv('APP_ID')
       AND page_id = nv('APP_PAGE_ID')
-      AND nvl(region_name,'R'||region_id) = p_region_selector
+      AND NVL(region_name,'R'||region_id) = NVL(p_region_selector, NVL(region_name,'R'||region_id))
       AND ROWNUM <2;
 
      RETURN apex_plugin_util.replace_substitutions(nvl(v_filename,'Excel'));
