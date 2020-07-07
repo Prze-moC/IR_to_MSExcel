@@ -545,9 +545,9 @@ function buildExcel(rows,iGrid,propertiesFromPlugin,fileName,path,moment) {
             $button.addClass('ir-to-ms-excel-button');
             var span_inside_button = $button.find("span");
             if(span_inside_button.length) {
-              $(span_inside_button).text('XLSX');  
+              $(span_inside_button).text('Download as XLSX');  
             } else {
-              $button.text('XLSX');
+              $button.text('Download as XLSX');
             };
             /*$button.prepend('<span class="a-IGDialog-iconList-icon a-Icon icon-ig-dl-xls ir-to-ms-excel-block-icon" aria-hidden="true"></span>');*/
             $( ".ir-to-ms-excel-block-w-button").prepend($button);
